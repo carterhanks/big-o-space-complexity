@@ -240,6 +240,35 @@ function countLettersRoundTwo(str) {
 
 // CODE HERE 
 
+class Factorial {
+  constructor() {
+    this.cache = {};
+  };
+
+  calcFac(num) {
+    if (this.cache[num]) {
+    console.log('hey you getting paid. Here is some cache')
+    return this.cache[num] 
+  } else {
+      let answer = num;
+
+      for (let i = num - i; i >= 1; i--) {
+        console.log(answer);
+      answer *= i;
+      };
+
+      this.cache[num] = answer;
+
+      return answer;
+    };
+  };
+};
+
+const facInstance = new Factorial();
+// console.log(facInstance);
+facInstance.calcFac(4);
+// facInstance.calcFac(4);
+
 
 /* 
   We want to test a non-memoized version of this too, 
